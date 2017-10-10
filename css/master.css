@@ -1,6 +1,10 @@
 body{
   padding: 0;
   margin: 0;
+  background-image: url('../images/portadaBackground.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 20vh;
 }
 h1{
   font-family: 'Open Sans';
@@ -8,6 +12,13 @@ h1{
   font-size: 14pt;
   color: white;
   text-align: center;
+}
+input::placeholder{
+  color: white;
+}
+.backgroundImage{
+  position: fixed;
+  height: 100vh;
 }
 .cabecera{
   background-color: #5D4037;
@@ -22,10 +33,48 @@ h1{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
+  width: 80%;
+  margin-top: 40px;
+  position: relative;
+  margin: 40px auto auto auto;
 }
-.inputContenedor{
+.inputContenedor {
   display: flex;
   flex-direction: row;
-
+  width: 100%;
+  margin-bottom: 10px;
+}
+.shadow{
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.inputContenedor input {
+  width: 100%;
+  background-color: #D7CCC8;
+  border: none;
+  color: white;
+  padding-left: 10px;
+}
+.icon{
+  background-color: #795548;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.md24 {
+  color: white;
+}
+.buttonSiguiente {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  color: white;
+  width: 20vw;
+  padding: 10px;
+  background-color: #00BCD4;
+  border: none;
+  border-radius: 15px;
+  align-self: flex-end;
 }

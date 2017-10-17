@@ -61,13 +61,13 @@ input::placeholder{
 }
 .inputContenedor input {
   width: 100%;
-  background-color: #D7CCC8;
+  background-color: rgba(194,185,182,80);
   border: none;
   color: white;
   padding-left: 10px;
 }
 .icon{
-  background-color: #795548;
+  background-color: #5D4037;
   padding: 10px;
   display: flex;
   align-items: center;

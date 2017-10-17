@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Relevamiento de sismos - Descripción del edificio</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/nico.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="javascript/nico.js"></script>
+  </head>
+  <body>
+    <header class="cabecera" >
+      <h1 class="cabeceraTitulo">Descripción del edificio</h1>
+    </header>
+    <section class="portada">
+      <!-- Municipio -->
+      <div class="inputContenedor shadow">
+        <div class="icon"><i class="material-icons md24">face</i></div>
+        <input type="text" name="textIdInspector" placeholder="Municipio">
+      </div>
+      <!-- Domicilio -->
+      <div class="inputContenedor shadow">
+        <div class="icon"><i class="material-icons md24">people</i></div>
+        <input type="text" name="textDomicilio" placeholder="Domicilio">
+      </div>
+      <!-- Telefono -->
+      <div class="inputContenedor shadow">
+        <div class="icon"><i class="material-icons md24">people</i></div>
+        <input type="text" name="textTelefono" placeholder="Teléfono">
+      </div>
+      <!-- Contenedor selector de números-->
+      <!-- Selector pisos -->
+      <form>
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <label class="upDownHeader">Pisos</label>
+          </tr>
+          <tr>
+            <td rowspan="2"><input class="upDownLabel" type="text" name="number" value="0"/></td>
+            <td><input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;" ></td>
+          </tr>
+          <tr>
+            <td><input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" ></td>
+          </tr>
+        </table>
+      </form>
+      <!-- Selector departamentos --> 
+      <form>
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <label class="upDownHeader">Departamentos</label>
+          </tr>
+          <tr>
+            <td rowspan="2"><input class="upDownLabel" type="text" name="number" value="0"/></td>
+            <td><input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;" ></td>
+          </tr>
+          <tr>
+            <td><input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" ></td>
+          </tr>
+        </table>
+      </form>
+      <!-- Selector area --> 
+      <form>
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <label class="upDownHeader">Area aprox. (En m2)</label>
+          </tr>
+          <tr>
+            <td rowspan="2"><input class="upDownLabel" type="text" name="number" value="0"/></td>
+            <td><input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;" ></td>
+          </tr>
+          <tr>
+            <td><input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" ></td>
+          </tr>
+        </table>
+      </form>
+      <!-- Selector subsuelos --> 
+      <form>
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <label class="upDownHeader">Número de subsuelos</label>
+          </tr>
+          <tr>
+            <td rowspan="2"><input class="upDownLabel" type="text" name="number" value="0"/></td>
+            <td><input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;" ></td>
+          </tr>
+          <tr>
+            <td><input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" ></td>
+          </tr>
+        </table>
+      </form>
+      <!-- Lista despegable tipo de construcción-->
+      <div class="dropdown shadow">
+        <div class="inputContenedor">
+          <div class="icon"><i class="material-icons md24">people</i></div>
+          <label name="text">Tipo de construcción</label>
+        </div>
+        <form class="dropdown-content shadow">
+          <input type="checkbox" name="" value="">Pórticos de hormigón<br>
+          <input type="checkbox" name="" value="">Pórticos de acero<br>
+          <input type="checkbox" name="" value="">Manpostería confinada<br>
+          <input type="checkbox" name="" value="">Manpostería no confinada<br>
+          <input type="checkbox" name="" value="">Hormigón prefabricado<br>
+          <input type="checkbox" name="" value="">Adobe<br>
+          <input type="checkbox" name="" value="">Muros de hormigón<br>
+        </form>
+      </div>
+      <!-- Lista despegable uso del edificio-->
+      <div class="dropdown shadow">
+        <div class="inputContenedor">
+          <div class="icon"><i class="material-icons md24">people</i></div>
+          <label name="text">Uso del edificio</label>
+        </div>
+        <form class="dropdown-content shadow">
+          <input type="checkbox" name="" value="">Casa habitación<br>
+          <input type="checkbox" name="" value="">Departamento<br>
+          <input type="checkbox" name="" value="">Comercio<br>
+          <input type="checkbox" name="" value="">Oficina<br>
+          <input type="checkbox" name="" value="">Oficina privada<br>
+          <input type="checkbox" name="" value="">Industria<br>
+          <input type="checkbox" name="" value="">Depósito<br>
+          <input type="checkbox" name="" value="">Educación<br>
+          <input type="checkbox" name="" value="">Recreativo<br>
+          <input type="checkbox" name="" value="">Iglesia<br>
+          <input type="checkbox" name="" value="">Servicio de emergencia<br>
+          <input type="checkbox" name="" value="">Histórico<br>
+          <input type="checkbox" name="" value="">Otros<br>
+        </form>
+      </div>
+      <!-- BOTON -->
+      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow">Siguiente
+      </button>
+    </section>
+  </body>
+</html>

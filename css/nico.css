@@ -1,0 +1,58 @@
+/*Nico*/
+/*Dropdown*/
+.dropdown {
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background-color: #D7CCC8;
+  border: none;
+  color: white;
+  padding-left: 10px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #D7CCC8;
+  min-width: 100%;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*upDownButton*/
+.upDownTable
+{
+
+}
+.upDownHeader
+{
+  background-color: #795548;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+}
+.upDownLabel
+{
+  width:50px;
+  height:23px;
+  font-weight:bold;
+}
+.upButton
+{
+   font-size:7px;
+   margin:0;
+   padding:0;
+   width:20px;
+   height:13px;
+}
+.downButton
+{
+  font-size:7px;
+  margin:0;
+  padding:0;
+  width:20px;
+  height:12px;
+}

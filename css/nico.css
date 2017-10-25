@@ -12,12 +12,12 @@
 }
 .dropdown-content {
   display: none;
-  position: absolute;
-  background-color: #D7CCC8;
-  min-width: 100%;
+  background-color: white;
+  margin-left: 44px;
+  width: calc(100% - 44px);
   z-index: 1;
 }
-.dropdown:hover .dropdown-content {
+.desplegableContainer:hover .dropdown-content {
   display: block;
 }
 /*upDownButton*/
@@ -117,6 +117,29 @@
   background-color: #5D4037;
   border: 1px solid white;
   color: white;
+}
+.desplegableContainer{
+  width: 100%;
+}
+.label{
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.label p{
+  color: black;
+  text-align: left;
+}
+.label i{
+  color: black;
+}
+.dropdown-content input {
+
 }
 @media only screen and (max-width: 520px) {
   .upDownButtonContainer {

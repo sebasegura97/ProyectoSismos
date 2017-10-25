@@ -21,10 +21,14 @@ p{
   color: white;
   text-align: center;
   font-family: 'Roboto slab';
-  font-size: 8pt;
+  font-size: 10pt;
+}
+input{
+  font-family: 'Roboto Slab';
+  font-size: 10pt;
 }
 input::placeholder{
-  color: white;
+  color: black;
 }
 .backgroundImage{
   position: fixed;
@@ -61,9 +65,10 @@ input::placeholder{
 }
 .inputContenedor input {
   width: 100%;
-  background-color: rgba(194,185,182,80);
+  /*background-color: rgba(194,185,182,80);*/
+  background-color: white;
   border: none;
-  color: white;
+  color: black;
   padding-left: 10px;
 }
 .icon{

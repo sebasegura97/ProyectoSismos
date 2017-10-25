@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Relevamiento de sismos</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="cabecera" >
+      <h1 class="cabeceraTitulo">
+        Evaluacion - Condiciones observadas
+      </h1>
+    </header>
+
+      <!-- CLASIFICACION DE COLAPSO -->
+
+      <div class="botoneraContainer shadow" >
+        <div class="botoneraHeader">
+          <h2>Colapso, colapso parcial o edificio fuera de fundacion</h2>
+        </div>
+        <div class="botonera">
+          <div class="boton">
+            <i class="material-icons md36">check</i>
+            <p>Leve/Ninguno</p>
+            <% valor1=1
+            %>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36">report_problem</i>
+            <p>Moderado</p>
+            <% valor1=2
+            %>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36">block</i>
+            <p>Seguro</p>
+            <% valor1=3
+            %>
+          </div>
+
+        </div>
+        <div class="inputContenedor shadow">
+          <input type="text" name="OtroColapso" placeholder="Otro nivel de daño" >
+        </div>
+      </div>
+    </br>
+    </br>
+    </br>
+      <!-- CLASIFICACION DE INCLINACION -->
+      <div class="botoneraContainer shadow">
+        <div class="botoneraHeader">
+          <h2>INCLINACION DE UN EDIFICIO O PISO</h2>
+        </div>
+        <div class="botonera">
+          <div class="boton">
+            <i class="material-icons md36">check</i>
+            <p>Leve/Ninguno</p>
+            <% valor2=1
+            %>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36">report_problem</i>
+            <p>Moderado</p>
+            <% valor2=2
+            %>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36">block</i>
+            <p>Seguro</p>
+            <% valor2=3
+            %>
+          </div>
+          <div class="inputContenedor shadow">
+            <input type="text" name="OtraInclinacion" placeholder="Otro nivel de Inclinacion" >
+          </div>
+        </div>
+      </div>
+    </br>
+    </br>
+    </br>
+      <!-- CLASIFICACION DE DAÑOS -->
+      <div class="botoneraContainer shadow">
+        <div class="botoneraHeader">
+          <h2>DAÑOS POR CORTE EN MUROS, OTROS DAÑOS ESTRUCTURALES</h2>
+        </div>
+        <div class="botonera">
+          <div class="boton">
+            <i class="material-icons md36">check</i>
+            <p>Leve/Ninguno</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36">report_problem</i>
+            <p>Moderado</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36">block</i>
+            <p>Seguro</p>
+          </div>
+          <div class="inputContenedor shadow">
+            <input type="text" name="OtroClacificasion" placeholder="Otro Tipo de daño estructural" >
+          </div>
+        </div>
+      </div>
+    </br>
+    </br>
+    </br>
+    <!-- CLASIFICACION DE PELIGRO DE CAIDA -->
+      <div class="botoneraContainer shadow">
+        <div class="botoneraHeader">
+          <h2>Peligor de caida de parapetos, chimeneas u otros</h2>
+        </div>
+        <div class="botonera">
+          <div class="boton">
+            <i class="material-icons md36">check</i>
+            <p>Leve/Ninguno</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36">report_problem</i>
+            <p>Moderado</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36">block</i>
+            <p>Seguro</p>
+          </div>
+          <div class="inputContenedor shadow">
+            <input type="text" name="OtroPeligro" placeholder="Otro peligor de caida">
+          </div>
+        </div>
+      </div>
+    </br>
+    </br>
+    </br>
+    <!-- CLASIFICACION DE MOVIMIENTO -->
+            <div class="botoneraContainer shadow">
+              <div class="botoneraHeader">
+                <h2>Movimiento de ladera o fisura</h2>
+              </div>
+              <div class="botonera">
+                <div class="boton">
+                  <i class="material-icons md36">check</i>
+                  <p>Leve/Ninguno</p>
+                </div>
+                <div class="boton">
+                  <i class="material-icons md36">report_problem</i>
+                  <p>Moderado</p>
+                </div>
+                <div class="boton">
+                  <i class="material-icons md36">block</i>
+                  <p>Seguro</p>
+                </div>
+                <div class="inputContenedor shadow">
+                  <input type="text" name="OtroMovimiento" placeholder="Tipo de movimientos" >
+                </div>
+              </div>
+            </div>
+          </br>
+          </br>
+          </br>
+          <div class="botoneraContainer shadow">
+<div class="inputContenedor shadow">
+          <div class="boton">
+            <input type="text" name="otraobservacion" placeholder="Otras Observaciones" >
+          </div>
+        </div>
+          </div>
+        </br>
+        </br>
+        </br>
+        <div class="botoneraContainer shadow">
+<div class="inputContenedor shadow">
+          <div class="boton">
+            <input type="text" name="comentariosdaños" placeholder="Comentarios" >
+          </div>
+        </div>
+          </div>
+
+          <!-- CLASIFICACION DE COLAPSO -->
+          <div class="botoneraContainer shadow">
+            <div class="botoneraHeader">
+              <h2>Daño estimado al edificio en %</h2>
+            </div>
+            <input type="text" name="daño">
+            <% daño=(valor1+valor2)/2
+            %>
+          </div>
+          <% daño=(valor1+valor2)/2
+          %>
+
+      <!-- BOTON -->
+      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow" >Siguiente >>
+      </button>
+    </section>
+  </body>
+</html>

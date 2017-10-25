@@ -106,16 +106,18 @@
   width: 100px;
   border-radius: 0;
   background-color: #5D4037;
-  border: 1px solid white;
+  border-bottom: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   color: white;
 }
 .downButton{
   width: 100px;
   height: 40px;
   border-radius: 0;
-  border: none;
   background-color: #5D4037;
-  border: 1px solid white;
+  border:none;
   color: white;
 }
 .desplegableContainer{

@@ -40,7 +40,7 @@
           </div>
         </div>
         <label for="rangeColapso" id="labelRangeColapso">50%</label>
-        <input type="range" name="rangeColapso" id="inputRangeColapso" step="1" min="0" max="100" onmousemove="changeLabel()">
+        <input type="range" name="rangeColapso" id="inputRangeColapso" step="1" min="0" max="100" onchange="changeLabel()" onmousemove="changeLabel()">
       </div>
 
       <!-- HASTA AQUI -->
@@ -134,43 +134,35 @@
                 </div>
               </div>
             </div>
-          </br>
-          </br>
-          </br>
-          <div class="botoneraContainer shadow">
-<div class="inputContenedor shadow">
-          <div class="boton">
-            <input type="text" name="otraobservacion" placeholder="Otras Observaciones" >
-          </div>
-        </div>
-          </div>
-        </br>
-        </br>
-        </br>
-        <div class="botoneraContainer shadow">
-<div class="inputContenedor shadow">
-          <div class="boton">
-            <input type="text" name="comentariosdaños" placeholder="Comentarios" >
-          </div>
-        </div>
-          </div>
 
-          <!-- CLASIFICACION DE COLAPSO -->
-          <div class="botoneraContainer shadow">
-            <div class="botoneraHeader">
-              <h2>Daño estimado al edificio en %</h2>
-            </div>
-            <input type="text" name="daño">
-            <% daño=(valor1+valor2)/2
-            %>
-          </div>
-          <% daño=(valor1+valor2)/2
-          %>
+<!-- MODULO COMENTARIOS -->
+    <div class ="botoneraContainer shadow">
+      <div class="botoneraHeader">
+        <h2 >
+          Comentarios
+        </h2>
+      </div>
+      <textarea class="textArea" placeholder="Escriba aqui"></textarea>
+    </div>
 
-      <!-- BOTON -->
+<!-- DAÑOS TOTALES -->
+<div class ="botoneraContainer shadow">
+  <div class="botoneraHeader">
+    <h2 >
+      Daños totales al edificio
+    </h2>
+  </div>
+  <div class="dañosTotales">
+      <p>En  base a los dato que cargò en esta seccion del formulario, calculamos el siguiente daño total aproximado:</p>
+      <label for=""> XX% </label>
+  </div>
+</div>
+
+
+<!-- BOTON -->
       <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow" >Siguiente >>
       </button>
-    </section>
+  </section>
   </body>
   <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>

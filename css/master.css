@@ -5,6 +5,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 20vh;
+  padding-bottom: 50px;
 }
 h1{
   font-family: 'Open Sans';
@@ -184,6 +185,7 @@ background: #00BCD4;
   width: 20vw;
   padding: 10px;
   margin-top: 10px;
+  margin-bottom: 10px;
   background-color: #00BCD4;
   border: none;
   border-radius: 15px;
@@ -226,4 +228,50 @@ background: #00BCD4;
 .material-icons.md36{
   color: black;
   font-size: 42px;
+}
+
+/*CSS DE NAHUEL*/
+.textArea{
+
+  resize: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-family: "Roboto slab";
+  border: none;
+  font-size: 12pt;
+  /*width: 95%;*/
+  height: 150px;
+  width:100%;
+  padding: 0;
+  padding-top: 10px;
+  text-indent: 10px;
+  /*box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);*/
+  text-align: justify;
+  background-color: white;
+}
+
+.textAreaContainer{
+
+  align-content: center;
+  justify-content: center;
+}
+
+/*CSS DE MATI*/
+.dañosTotales{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.dañosTotales p{
+  color: black;
+  font-size: 14pt;
+  font-family: 'Roboto slab';
+}
+.dañosTotales label{
+  margin: 0 0 20px 0;
+  font-size: 20pt;
+  padding: 15px;
+  border: 2px solid #795548;
+  border-radius: 5px;
 }

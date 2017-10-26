@@ -30,6 +30,100 @@ input{
 input::placeholder{
   color: black;
 }
+
+/*INPUT RANGE ESTILO*/
+
+input[type=range] {
+-webkit-appearance: none;
+margin: 18px 0;
+width: 80%;
+}
+input[type=range]:focus {
+outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+width: 80%;
+height: 8.4px;
+cursor: pointer;
+animate: 0.2s;
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+background: #00BCD4;
+border-radius: 1.3px;
+border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+border: 1px solid #000000;
+height: 36px;
+width: 16px;
+border-radius: 3px;
+background: #ffffff;
+cursor: pointer;
+-webkit-appearance: none;
+margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+background: #00BCD4;
+}
+input[type=range]::-moz-range-track {
+width: 80%;
+height: 8.4px;
+cursor: pointer;
+animate: 0.2s;
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+background: #00BCD4;
+border-radius: 1.3px;
+border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+border: 1px solid #000000;
+height: 36px;
+width: 16px;
+border-radius: 3px;
+background: #ffffff;
+cursor: pointer;
+}
+input[type=range]::-ms-track {
+width: 80%;
+height: 8.4px;
+cursor: pointer;
+animate: 0.2s;
+background: transparent;
+border-color: transparent;
+border-width: 16px 0;
+color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+background: #2a6495;
+border: 0.2px solid #010101;
+border-radius: 2.6px;
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+background: #3071a9;
+border: 0.2px solid #010101;
+border-radius: 2.6px;
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+border: 1px solid #000000;
+height: 36px;
+width: 16px;
+border-radius: 3px;
+background: #ffffff;
+cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+background: #00BCD4;
+}
+input[type=range]:focus::-ms-fill-upper {
+background: #00BCD4;
+}
+
+/*FIN ESTILO INPUT RANGE*/
+
 .backgroundImage{
   position: fixed;
   height: 100vh;
@@ -98,10 +192,11 @@ input::placeholder{
 .botoneraContainer {
   display: flex;
   flex-direction: column;
-  background-color: #D7CCC8;
+  background-color: white;
   width: 100%;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
 
 }
 .botoneraHeader{
@@ -122,10 +217,13 @@ input::placeholder{
   margin: 10px;
   width: 33%;
 }
+.boton p{
+  color: black;
+}
 .boton:hover{
   cursor: pointer;
 }
 .material-icons.md36{
-  color: white;
-  font-size: 36px;
+  color: black;
+  font-size: 42px;
 }

@@ -15,36 +15,36 @@
       </h1>
     </header>
 
+    <section class="portada">
+
+      <!-- DESDE AQUI -->
+
       <!-- CLASIFICACION DE COLAPSO -->
-    
+
       <div class="botoneraContainer shadow" >
         <div class="botoneraHeader">
           <h2>Colapso, colapso parcial o edificio fuera de fundacion</h2>
         </div>
         <div class="botonera">
           <div class="boton">
-            <i class="material-icons md36">check</i>
+            <i class="material-icons md36" id="buttonLeve">check</i>
             <p>Leve/Ninguno</p>
-            <% valor1=1
-            %>
           </div>
           <div class="boton">
-            <i class="material-icons md36">report_problem</i>
+            <i class="material-icons md36" id="buttonModerado">report_problem</i>
             <p>Moderado</p>
-            <% valor1=2
-            %>
           </div>
           <div class="boton">
-            <i class="material-icons md36">block</i>
-            <p>Seguro</p>
-            <% valor1=3
-            %>
+            <i class="material-icons md36" id="buttonSevero">block</i>
+            <p>Severo</p>
           </div>
         </div>
+        <label for="rangeColapso" id="labelRangeColapso">50%</label>
+        <input type="range" name="rangeColapso" id="inputRangeColapso" step="1" min="0" max="100" onmousemove="changeLabel()">
       </div>
-    </br>
-    </br>
-    </br>
+
+      <!-- HASTA AQUI -->
+
       <!-- CLASIFICACION DE INCLINACION -->
       <div class="botoneraContainer shadow">
         <div class="botoneraHeader">
@@ -54,20 +54,14 @@
           <div class="boton">
             <i class="material-icons md36">check</i>
             <p>Leve/Ninguno</p>
-            <% valor2=1
-            %>
           </div>
           <div class="boton">
             <i class="material-icons md36">report_problem</i>
             <p>Moderado</p>
-            <% valor2=2
-            %>
           </div>
           <div class="boton">
             <i class="material-icons md36">block</i>
             <p>Seguro</p>
-            <% valor2=3
-            %>
           </div>
         </div>
       </div>
@@ -178,4 +172,6 @@
       </button>
     </section>
   </body>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 </html>

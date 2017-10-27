@@ -12,12 +12,12 @@
 }
 .dropdown-content {
   display: none;
-  position: absolute;
-  background-color: #D7CCC8;
-  min-width: 100%;
+  background-color: white;
+  margin-left: 44px;
+  width: calc(100% - 44px);
   z-index: 1;
 }
-.dropdown:hover .dropdown-content {
+.desplegableContainer:hover .dropdown-content {
   display: block;
 }
 /*upDownButton*/
@@ -36,9 +36,12 @@
 }
 .upDownLabel
 {
-  width:50px;
-  height:23px;
+  width:100px;
+  height:80px;
+  text-align: center;
   font-weight:bold;
+  border: none;
+  padding: 0;
 }
 .upButton
 {
@@ -65,18 +68,96 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 
+}
+.upDownButtonHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5D4037;
+  width: 100%;
+  height: 40px;
 }
 .upDownButtonContainer {
   display: flex;
   flex-direction: column;
-  width: 30px;
+  height: 120px;
+  width: 200px;
 }
 .upDownButtonContainerInternal{
   display: flex;
   flex-direction: row;
+  margin: 0;
+  height: 80px;
+  width: 200px;
 }
 .upDownButtonBotones{
   display: flex;
   flex-direction: column;
+  height: 80px;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.upButton{
+  height: 40px;
+  width: 100px;
+  border-radius: 0;
+  background-color: #5D4037;
+  border-bottom: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: white;
+}
+.downButton{
+  width: 100px;
+  height: 40px;
+  border-radius: 0;
+  background-color: #5D4037;
+  border:none;
+  color: white;
+}
+.desplegableContainer{
+  width: 100%;
+}
+.label{
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.label p{
+  color: black;
+  text-align: left;
+}
+.label i{
+  color: black;
+}
+.dropdown-content input {
+
+}
+@media only screen and (max-width: 520px) {
+  .upDownButtonContainer {
+    width: 100px;
+    margin: 10px;
+  }
+  .upDownButtonContainerInternal {
+    width: 100px;
+  }
+  .upButton{
+    width: 60px;
+  }
+  .downButton{
+    width: 60px;
+  }
+  .upDownLabel{
+    width: 40px;
+  }
 }

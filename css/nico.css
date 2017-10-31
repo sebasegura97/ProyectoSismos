@@ -144,21 +144,3 @@
 .dropdown-content input {
 
 }
-@media only screen and (max-width: 520px) {
-  .upDownButtonContainer {
-    width: 100px;
-    margin: 10px;
-  }
-  .upDownButtonContainerInternal {
-    width: 100px;
-  }
-  .upButton{
-    width: 60px;
-  }
-  .downButton{
-    width: 60px;
-  }
-  .upDownLabel{
-    width: 40px;
-  }
-}

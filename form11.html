@@ -5,13 +5,14 @@
     <meta charset="utf-8">
     <title>Relevamiento de sismos</title>
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/nico.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
 
     <header class="cabecera" >
       <h1 class="cabeceraTitulo">
-        Formulario de evaluacion detallada de la seguridad.
+        Formulario de evaluacion rapida de la seguridad.
       </h1>
     </header>
     <!-- <img src="images/portadaBackground.png" alt="Imagen de fondo" class="backgroundImage"> -->
@@ -44,29 +45,30 @@
         </div>
         <input type="time" name="portadaTime" placeholder="Hora">
       </div>
-      <!-- CLASIFICACION ANTERIOR -->
-      <div class="botoneraContainer shadow">
-        <div class="botoneraHeader">
-          <h2>Clasificacion final del formulario de evaluacion rapida</h2>
-        </div>
-        <div class="botonera">
-          <div class="boton">
-            <i class="material-icons md36">remove_red_eye</i>
-            <p>Insepeccionado (verde)</p>
+      <!-- AREA -->
+
+      <div class="desplegableContainer">
+        <div class="inputContenedor shadow">
+          <div class="icon">
+            <i class="material-icons md24">content_paste</i>
           </div>
-          <div class="boton">
-            <i class="material-icons md36">warning</i>
-            <p>Uso restringido (amarillo)</p>
-          </div>
-          <div class="boton">
-            <i class="material-icons md36">block</i>
-            <p>Inseguro<br>(rojo)</p>
+          <div class="label">
+            <p>Area de inspeccion</p>
+            <i class="material-icons md24">keyboard_arrow_down</i>
           </div>
         </div>
+        <form class="dropdown-content shadow">
+          <input type="radio" name="areaInspeccion" value="Interior">Interior<br>
+          <input type="radio" name="areaInspeccion" value="Exterior">Exterior<br>
+        </form>
       </div>
-      <!-- BOTON -->
-      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow"><a href="form22.html">Siguiente</a>
+
+
+      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow"><a href="form12.html">Siguiente</a>
       </button>
     </section>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>

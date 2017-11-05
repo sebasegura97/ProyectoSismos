@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/nico.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="javascript/nico.js"></script>
   </head>
   <body>
     <header class="cabecera" >
+      
       <h1 class="cabeceraTitulo">Descripción del edificio</h1>
     </header>
     <section class="portada">
@@ -24,83 +26,83 @@
       </div>
       <!-- Telefono -->
       <div class="inputContenedor shadow">
-        <div class="icon"><i class="material-icons md24">people</i></div>
+        <div class="icon"><i class="material-icons md24">phone</i></div>
         <input type="text" name="textTelefono" placeholder="Teléfono">
       </div>
-      <!-- BOTONERA DE UP DOWN -->
+ <!-- BOTONERA DE UP DOWN -->
       <div class="upDownBotonera">
-        <!-- Selector pisos -->
-        <div class="upDownButonContainer">
-          <form>
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tr>
-              <label class="upDownHeader">Pisos</label>
-            </tr>
-            <tr>
-              <td rowspan="2"><input class="upDownLabel" type="text" name="number" value="0"/></td>
-              <td><input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;" >
-                <i class="material-icons md24">keyboard_arrow_down</i>
-              </input>
-              </td>
-            </tr>
-            <tr>
-              <td><input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" ></td>
-            </tr>
-          </table>
+
+        <!-- UP DOWN PISOS -->
+        <div class="upDownButtonContainer">
+          <div class="upDownButtonHeader">
+            <p>Pisos</p>
+          </div>
+          <form class="upDownButtonContainerInternal">
+            <div class="upDownButtonNumber">
+              <input class="upDownLabel" type="text" name="cantidadPisos" value="0" readonly/>
+            </div>
+            <div class="upDownButtonBotones">
+              <input class="upButton" type="button" value=" /\ " onclick="this.form.cantidadPisos.value++;">
+              <input class="downButton" type=button value=" \/ " onclick="if(this.form.cantidadPisos.value>0)this.form.cantidadPisos.value--;" >
+            </div>
           </form>
         </div>
-        <!-- SELECTOR DEPARTAMENTOS -->
-        <div class="upDownButonContainer">
-          <form>
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tr>
-              <label class="upDownHeader">Departamentos</label>
-            </tr>
-            <tr>
-              <td rowspan="2"><input class="upDownLabel" type="text" name="number" value="0"/></td>
-              <td><input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;" ></td>
-            </tr>
-            <tr>
-              <td><input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" ></td>
-            </tr>
-          </table>
+
+        <!-- UP DOWN DEPARTAMENTOS -->
+
+        <div class="upDownButtonContainer">
+          <div class="upDownButtonHeader">
+            <p>Departamentos</p>
+          </div>
+          <form class="upDownButtonContainerInternal">
+            <div class="upDownButtonNumber">
+              <input class="upDownLabel" type="text" name="cantidadDepartamentos" value="0" readonly/>
+            </div>
+            <div class="upDownButtonBotones">
+              <input class="upButton" type="button" value=" /\ " onclick="this.form.cantidadDepartamentos.value++;">
+              <input class="downButton" type=button value=" \/ " onclick="if(this.form.cantidadDepartamentos.value>0)this.form.cantidadDepartamentos.value--;" >
+            </div>
           </form>
         </div>
-        <!-- Selector area -->
-        <div class="upDownButonContainer">
-          <form>
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tr>
-              <label class="upDownHeader">Area aprox. (En m2)</label>
-            </tr>
-            <tr>
-              <td rowspan="2"><input class="upDownLabel" type="text" name="number" value="0"/></td>
-              <td><input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;" ></td>
-            </tr>
-            <tr>
-              <td><input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" ></td>
-            </tr>
-          </table>
+
+        <!-- UP DOWN AREA APROXIMADA -->
+
+        <div class="upDownButtonContainer">
+          <div class="upDownButtonHeader">
+            <p>Area aproximada</p>
+          </div>
+          <form class="upDownButtonContainerInternal">
+            <div class="upDownButtonNumber">
+              <input class="upDownLabel" type="text" name="areaAproximada" value="0" readonly/>
+            </div>
+            <div class="upDownButtonBotones">
+              <input class="upButton" type="button" value=" /\ " onclick="this.form.areaAproximada.value++;">
+              <input class="downButton" type=button value=" \/ " onclick="if(this.form.areaAproximada.value>0)this.form.areaAproximada.value--;" >
+            </div>
           </form>
         </div>
-        <!-- Selector subsuelos -->
-        <div class="upDownButonContainer">
-          <form>
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tr>
-              <label class="upDownHeader">Numero de subsuelos</label>
-            </tr>
-            <tr>
-              <td rowspan="2"><input class="upDownLabel" type="text" name="number" value="0"/></td>
-              <td><input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;" ></td>
-            </tr>
-            <tr>
-              <td><input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" ></td>
-            </tr>
-          </table>
-        </form>
+
+        <!-- UP DOWN SUBSUELOS -->
+
+        <div class="upDownButtonContainer">
+          <div class="upDownButtonHeader">
+            <p>Cantidad de subsuelos</p>
+          </div>
+          <form class="upDownButtonContainerInternal">
+            <div class="upDownButtonNumber">
+              <input class="upDownLabel" type="text" name="cantidadSubsuelos" value="0" readonly/>
+            </div>
+            <div class="upDownButtonBotones">
+              <input class="upButton" type="button" value=" /\ " onclick="this.form.cantidadSubsuelos.value++;">
+              <input class="downButton" type=button value=" \/ " onclick="if(this.form.cantidadSubsuelos.value>0)this.form.cantidadSubsuelos.value--;" >
+            </div>
+          </form>
+        </div>
+
       </div>
+
       <!-- DESPLEGABLES -->
+
       <!-- DESPLEGABLE TIPO DE CONSTRUCCION -->
       <div class="desplegableContainer">
         <div class="inputContenedor shadow">
@@ -122,7 +124,9 @@
           <input type="checkbox" name="" value="">Muros de hormigón<br>
         </form>
       </div>
+
       <!-- DESPLEGABLE USO DEL EDIFICIO -->
+
       <div class="desplegableContainer">
         <div class="inputContenedor shadow">
           <div class="icon">
@@ -149,77 +153,10 @@
           <input type="checkbox" name="" value="">Otros<br>
         </form>
       </div>
+
       <!-- BOTON -->
-      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow">Siguiente
+      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow"><a href="form13.html">Siguiente</a>
       </button>
     </section>
   </body>
 </html>
-
-<!--
-         <!-- UP DOWN PISOS 
-        <div class="upDownButtonContainer">
-          <div class="upDownButtonHeader">
-            <p>Pisos</p>
-          </div>
-          <form class="upDownButtonContainerInternal">
-            <div class="upDownButtonNumber">
-              <input class="upDownLabel" type="text" name="number" value="0"/>
-            </div>
-            <div class="upDownButtonBotones">
-              <input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;">
-              <input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" >
-            </div>
-          </form>
-        </div>
-
-        <!-- UP DOWN DEPARTAMENTOS 
-
-        <div class="upDownButtonContainer">
-          <div class="upDownButtonHeader">
-            <p>Departamentos</p>
-          </div>
-          <form class="upDownButtonContainerInternal">
-            <div class="upDownButtonNumber">
-              <input class="upDownLabel" type="text" name="number" value="0"/>
-            </div>
-            <div class="upDownButtonBotones">
-              <input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;">
-              <input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" >
-            </div>
-          </form>
-        </div>
-
-        <!-- UP DOWN AREA APROXIMADA 
-
-        <div class="upDownButtonContainer">
-          <div class="upDownButtonHeader">
-            <p>Area aproximada</p>
-          </div>
-          <form class="upDownButtonContainerInternal">
-            <div class="upDownButtonNumber">
-              <input class="upDownLabel" type="text" name="number" value="0"/>
-            </div>
-            <div class="upDownButtonBotones">
-              <input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;">
-              <input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" >
-            </div>
-          </form>
-        </div>
-
-         UP DOWN SUBSUELOS 
-        <div class="upDownButtonContainer">
-          <div class="upDownButtonHeader">
-            <p>Cantidad de subsuelos</p>
-          </div>
-          <form class="upDownButtonContainerInternal">
-            <div class="upDownButtonNumber">
-              <input class="upDownLabel" type="text" name="number" value="0"/>
-            </div>
-            <div class="upDownButtonBotones">
-              <input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;">
-              <input class="downButton" type=button value=" \/ " onclick="if(this.form.number.value>0)this.form.number.value--;" >
-            </div>
-          </form>
-        </div>
-      -->

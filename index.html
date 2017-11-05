@@ -1,59 +1,42 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Relevamiento de sismos</title>
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/nico.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <body>
+  <body class="bodyPortada">
 
     <header class="cabecera" >
       <h1 class="cabeceraTitulo">
-        Formulario de evaluacion rapida de la seguridad.
+        SISTEMA DE RELEVAMIENTO DE DATOS POST SISMICO
       </h1>
     </header>
-    <!-- <img src="images/portadaBackground.png" alt="Imagen de fondo" class="backgroundImage"> -->
+
     <section class="portada">
-      <!-- ID INSPECTOR -->
-      <div class="inputContenedor shadow">
-        <div class="icon">
-          <i class="material-icons md24">face</i>
-        </div>
-        <input type="text" name="textIdInspector" placeholder="Id Inspector">
+
+      <div class="seleccioneFormulario">
+        <a href="form11.html">
+          <div class="formulario">
+            <i class="material-icons md72">fast_forward</i>
+            <h3>Evaluacion Rapida</h3>
+          </div>
+        </a>
+
+        <a href="form21.html">
+          <div class="formulario">
+            <i class="material-icons md72">assignment</i>
+            <h3>Evaluacion Detallada</h3>
+          </div>
+        </a>
+
       </div>
-      <!-- AFILIACION -->
-      <div class="inputContenedor shadow">
-        <div class="icon">
-          <i class="material-icons md24">people</i>
-        </div>
-        <input type="text" name="textAfiliacion" placeholder="Afiliacion">
-      </div>
-      <!-- FECHA -->
-      <div class="inputContenedor shadow">
-        <div class="icon">
-          <i class="material-icons md24">date_range</i>
-        </div>
-        <input type="date" name="portadaFecha" placeholder="Fecha">
-      </div>
-      <!-- HORA -->
-      <div class="inputContenedor shadow">
-        <div class="icon">
-          <i class="material-icons md24">alarm_on</i>
-        </div>
-        <input type="time" name="portadaTime" placeholder="Hora">
-      </div>
-      <!-- AREA -->
-      <div class="inputContenedor shadow">
-        <div class="icon">
-          <i class="material-icons md24">content_paste</i>
-        </div>
-        <input type="text" name="textArea" placeholder="Seleccione area de inspeccion">
-      </div>
-      <!-- BOTON -->
-      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow">Siguiente
-      </button>
+
     </section>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>

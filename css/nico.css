@@ -107,7 +107,7 @@
   border-radius: 0;
   background-color: #5D4037;
   border-bottom: 1px solid white;
-  border-top: none;
+  border-top: 1px solid white;
   border-left: none;
   border-right: none;
   color: white;
@@ -118,6 +118,7 @@
   border-radius: 0;
   background-color: #5D4037;
   border:none;
+  border-bottom: 1px solid white;
   color: white;
 }
 .desplegableContainer{
@@ -142,22 +143,4 @@
 }
 .dropdown-content input {
 
-}
-@media only screen and (max-width: 520px) {
-  .upDownButtonContainer {
-    width: 100px;
-    margin: 10px;
-  }
-  .upDownButtonContainerInternal {
-    width: 100px;
-  }
-  .upButton{
-    width: 60px;
-  }
-  .downButton{
-    width: 60px;
-  }
-  .upDownLabel{
-    width: 40px;
-  }
 }

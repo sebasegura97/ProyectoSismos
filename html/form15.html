@@ -70,7 +70,7 @@
     </div>
 
 <!-- BOTON -->
-      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow" onclick="cargarDatos()"><a href="../php/final.php">Siguiente</a>
+      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow" onclick="cargarDatos()"><a href="final.php">Siguiente</a>
       </button>
   </section>
   </body>
@@ -83,9 +83,29 @@
 
         function cargarDatos(){
           var Barricada = document.getElementById('Barricada').checked;
+          if (Barricada === true) {
+            Barricada = 1;
+          } else{
+            Barricada = 0;
+          }
           var Geotecnica = document.getElementById('Geotecnica').checked;
+          if (Geotecnica === true) {
+            Geotecnica = 1;
+          } else{
+            Geotecnica = 0;
+          }
           var Estructural = document.getElementById('Estructural').checked;
+          if (Estructural === true) {
+            Estructural = 1;
+          } else{
+            Estructural = 0;
+          }
           var Otros = document.getElementById('Otros').checked;
+          if (Otros === true) {
+            Otros = 1;
+          } else{
+            Otros = 0;
+          }
           var Comentarios = document.getElementById('Comentarios').value;
 
           writeCookie(name="aa_req_Barricada", Barricada);

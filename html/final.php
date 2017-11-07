@@ -29,7 +29,7 @@
 
 
     <script>
-
+    alert("Formulario cargado exitosamente!");
     function toggle() {
         var button = document.getElementById('buttonFinal');
         button.classList.toggle("shadow");

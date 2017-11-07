@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Relevamiento de sismos</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <header class="cabecera" >
+      <h1 class="cabeceraTitulo">
+        Detalle final
+      </h1>
+    </header>
+
+<section class="portada">
+    <!-- Subir imagen -->
+    <div class="botoneraContainer shadow" >
+      <div class="botoneraHeader">
+    <h2 class="cabeceraTitulo">
+      Subir imagen
+    </h2>
+  </div>
+
+  <p style="color:black;">
+    Inserte una imagen relevante del edificio inspeccionado.
+  </p>
+
+  <div class="inputContenedor shadow">
+        <form  method="post" action="action.php" enctype="multipart/form-data">
+       <input type="file" name="buttonSiguiente">
+       <input type="submit" name="" value="Subir">
+    </form>
+  </div>
+</div>
+
+      <!-- DESDE AQUI -->
+
+      <!-- CLASIFICACION DE COLAPSO -->
+
+      <div class="botoneraContainer shadow" >
+        <div class="botoneraHeader">
+          <h2>Daño estimado del edificio</h2>
+        </div>
+        <div class="botonera">
+          <div class="boton">
+            <i class="material-icons md36" id="buttonLeve">check</i>
+            <p>Leve/Ninguno</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36" id="buttonModerado">report_problem</i>
+            <p>Moderado</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36" id="buttonSevero">block</i>
+            <p>Severo</p>
+          </div>
+        </div>
+        <label for="rangeColapso" id="labelRangeColapso">50%</label>
+        <input type="range" name="rangeColapso" id="inputRangeColapso" step="5" min="0" max="100" onchange="changeLabel()" onmousemove="changeLabel()">
+      </div>
+
+      <!-- HASTA AQUI -->
+
+
+<!-- BOTON -->
+      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow" >Siguiente >>
+      </button>
+  </section>
+  </body>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</html>

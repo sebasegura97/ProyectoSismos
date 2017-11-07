@@ -1,3 +1,20 @@
+<?php
+    $connectionInfo = array("UID" => "proyectosismos@proyectosismos", "pwd" => "Waxelrose23", "Database" => "proyectosismos", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+    $serverName = "tcp:proyectosismos.database.windows.net,1433";
+    $conn = sqlsrv_connect($serverName, $connectionInfo);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+        echo "No conectado";
+    }
+    echo "Connected successfully <br>";
+
+    echo "<br>";
+    var_dump($formulario);
+    $formulario = $_COOKIE['formulario'];
+
+?>
+
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,14 +35,14 @@
     <section class="portada">
 
       <div class="seleccioneFormulario">
-        <a href="form11.html">
+        <a href="form11.php" onclick="writeRapido()" >
           <div class="formulario">
             <i class="material-icons md72">fast_forward</i>
             <h3>Evaluacion Rapida</h3>
           </div>
         </a>
 
-        <a href="form21.html">
+        <a href="form21.php" onclick="writeDetallado()">
           <div class="formulario">
             <i class="material-icons md72">assignment</i>
             <h3>Evaluacion Detallada</h3>
@@ -34,8 +51,23 @@
 
       </div>
 
-    </section>
+   </section>
 
+    
+    <script>
+
+      function writeRapido(){
+         document.cookie= "formulario=rapido";
+
+      }
+
+      function writeDetallado(){
+        document.cookie = "formulario=detallado";
+      }
+
+
+
+    </script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
   </body>

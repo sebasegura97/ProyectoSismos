@@ -3,31 +3,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Relevamiento de sismos - Descripción del edificio</title>
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/nico.css">
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/nico.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="javascript/nico.js"></script>
   </head>
   <body>
     <header class="cabecera" >
-      
+
       <h1 class="cabeceraTitulo">Descripción del edificio</h1>
     </header>
     <section class="portada">
       <!-- Municipio -->
       <div class="inputContenedor shadow">
         <div class="icon"><i class="material-icons md24">face</i></div>
-        <input type="text" name="textIdInspector" placeholder="Municipio">
+        <input type="text" name="textIdInspector" placeholder="Municipio" id="Inspeccion_municipio">
       </div>
       <!-- Domicilio -->
       <div class="inputContenedor shadow">
         <div class="icon"><i class="material-icons md24">people</i></div>
-        <input type="text" name="textDomicilio" placeholder="Domicilio">
+        <input type="text" name="textDomicilio" placeholder="Domicilio" id="Inspeccion_domicilio">
       </div>
       <!-- Telefono -->
       <div class="inputContenedor shadow">
         <div class="icon"><i class="material-icons md24">phone</i></div>
-        <input type="text" name="textTelefono" placeholder="Teléfono">
+        <input type="text" name="textTelefono" placeholder="Teléfono" id="Inspeccion_telefono">
       </div>
       <!-- BOTONERA DE UP DOWN -->
       <div class="upDownBotonera">
@@ -39,7 +38,7 @@
           </div>
           <form class="upDownButtonContainerInternal">
             <div class="upDownButtonNumber">
-              <input class="upDownLabel" type="text" name="number" value="0"/>
+              <input class="upDownLabel" type="text" id="Inspeccion_num_pisos" name="number" value="0" />
             </div>
             <div class="upDownButtonBotones">
               <input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;">
@@ -56,7 +55,7 @@
           </div>
           <form class="upDownButtonContainerInternal">
             <div class="upDownButtonNumber">
-              <input class="upDownLabel" type="text" name="number" value="0"/>
+              <input class="upDownLabel" type="text" name="number" value="0" id="Inspeccion_num_deptos" />
             </div>
             <div class="upDownButtonBotones">
               <input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;">
@@ -73,7 +72,7 @@
           </div>
           <form class="upDownButtonContainerInternal">
             <div class="upDownButtonNumber">
-              <input class="upDownLabel" type="text" name="number" value="0"/>
+              <input class="upDownLabel" type="text" name="number" value="0" id="Inspeccion_area_planta"/>
             </div>
             <div class="upDownButtonBotones">
               <input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;">
@@ -90,7 +89,7 @@
           </div>
           <form class="upDownButtonContainerInternal">
             <div class="upDownButtonNumber">
-              <input class="upDownLabel" type="text" name="number" value="0"/>
+              <input class="upDownLabel" type="text" name="number" value="0" id="Inspeccion_num_sotanos"/>
             </div>
             <div class="upDownButtonBotones">
               <input class="upButton" type="button" value=" /\ " onclick="this.form.number.value++;">
@@ -157,8 +156,42 @@
       </div>
 
       <!-- BOTON -->
-      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow"><a href="form13.html">Siguiente</a>
+      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow" onclick="writeData()"><a href="form13.html">Siguiente</a>
       </button>
     </section>
+    <script type="text/javascript">
+
+    function writeData(){
+      var nameMunicipio = "Inspeccion_municipio";
+      var nameDomicilio = "Inspeccion_domicilio";
+      var nameTelefono = "Inspeccion_telefono";
+      var nameNum_pisos = "Inspeccion_num_pisos";
+      var nameArea_planta = "Inspeccion_area_planta";
+      var nameNum_sotanos = "Inspeccion_num_sotanos"; //Subsuelos
+
+      var valueMunicipio = document.getElementById('Inspeccion_municipio').value;
+      var valueDomicilio = document.getElementById('Inspeccion_domicilio').value;
+      var valueTelefono = document.getElementById('Inspeccion_telefono').value;
+      var valueNum_pisos = document.getElementById('Inspeccion_num_pisos').value;
+      var valueArea_planta = document.getElementById('Inspeccion_area_planta').value;
+      var valueNum_sotanos = document.getElementById('Inspeccion_num_sotanos').value; //Subsuelos
+
+
+      writeCookie(nameMunicipio, valueMunicipio);
+      writeCookie(nameDomicilio, valueDomicilio);
+      writeCookie(nameTelefono, valueTelefono);
+      writeCookie(nameNum_pisos, valueNum_pisos);
+      writeCookie(nameArea_planta, valueArea_planta);
+      writeCookie(nameNum_sotanos, valueNum_sotanos);
+    }
+
+
+
+    function writeCookie(name, value){
+      document.cookie = name + "=" + value;
+      }
+
+    </script>
+    <script type="text/javascript" src="../js/nico.js"></script>
   </body>
 </html>

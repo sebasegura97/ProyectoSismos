@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Relevamiento de sismos</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/nico.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <header class="cabecera" >
+      <h1 class="cabeceraTitulo">
+      Acciones adicionales
+      </h1>
+    </header>
+    <section class="portada">
+    <p class="texto">
+      Solo tilde aquellos cuadros en los que se necesite alguna acción adicional
+    </p>
+
+    <!-- Checkbox barricada-->
+        <div class="checkboxContainer">
+          <div class="checkboxHeader">
+            <input type="checkbox" onchange="barricadaTextArea()">
+            <p class="checkboxText">Se requiere barricada en las siguientes áreas:</p>
+          </input>
+          </div>
+          <textarea class="textArea" placeholder="Detalle" id="barricadaDetalle" style="display: none"></textarea>
+        </div>
+
+    <!-- Checkbox geotecnica-->
+        <div class="checkboxContainer">
+          <div class="checkboxHeader">
+            <input type="checkbox" onchange="geotecnicaTextArea()">
+            <p class="checkboxText">Geotécnica</p>
+          </input>
+          </div>
+          <textarea class="textArea" placeholder="Detalle" id="geotecnicaDetalle" style="display: none"></textarea>
+        </div>
+
+    <!-- Checkbox estructural-->
+        <div class="checkboxContainer">
+          <div class="checkboxHeader">
+            <input type="checkbox" onchange="estructuralTextArea()">
+            <p class="checkboxText">Estructural</p>
+          </input>
+          </div>
+          <textarea class="textArea" placeholder="Detalle" id="estructuralDetalle" style="display: none"></textarea>
+        </div>
+
+    <!-- Checkbox otro-->
+        <div class="checkboxContainer">
+          <div class="checkboxHeader">
+            <input type="checkbox" onchange="otroTextArea()">
+            <p class="checkboxText">Otros</p>
+          </input>
+          </div>
+          <textarea class="textArea" placeholder="Detalle" id="otroDetalle" style="display: none"></textarea>
+        </div>
+
+<!-- MODULO COMENTARIOS -->
+    <div class ="botoneraContainer shadow">
+      <div class="botoneraHeader">
+        <h2 >
+          Comentarios
+        </h2>
+      </div>
+      <textarea class="textArea" placeholder="Escriba aqui"></textarea>
+    </div>
+
+<!-- BOTON -->
+      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow"><a href="#">Siguiente</a>
+      </button>
+  </section>
+  </body>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/nico.js"></script>
+</html>

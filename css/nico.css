@@ -1,4 +1,45 @@
 /*Nico*/
+
+/*Texto*/
+
+.texto{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px;
+  font-size: 15pt;
+  color: black;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*Checkbox con desplegable*/
+
+.checkboxContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.checkboxHeader{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: #5D4037;
+  width: 100%;
+  height: 40px;
+}
+
+.checkboxText{
+  font-family: "Roboto slab";
+  font-size: 12pt;
+}
+
 /*Dropdown*/
 .dropdown {
   margin-bottom: 10px;

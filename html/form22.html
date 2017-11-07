@@ -1,0 +1,202 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Relevamiento de sismos - Descripción del edificio</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/nico.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="javascript/nico.js"></script>
+  </head>
+  <body>
+    <header class="cabecera" >
+
+      <h1 class="cabeceraTitulo">Descripción del edificio</h1>
+    </header>
+    <section class="portada">
+      <!-- Municipio -->
+      <div class="inputContenedor shadow">
+        <div class="icon"><i class="material-icons md24">face</i></div>
+        <input type="text" name="textIdInspector" placeholder="Municipio">
+      </div>
+      <!-- Domicilio -->
+      <div class="inputContenedor shadow">
+        <div class="icon"><i class="material-icons md24">people</i></div>
+        <input type="text" name="textDomicilio" placeholder="Domicilio">
+      </div>
+      <!-- Telefono -->
+      <div class="inputContenedor shadow">
+        <div class="icon"><i class="material-icons md24">phone</i></div>
+        <input type="text" name="textTelefono" placeholder="Teléfono">
+      </div>
+      <!-- BOTONERA DE UP DOWN -->
+      <div class="upDownBotonera">
+
+        <!-- UP DOWN PISOS -->
+        <div class="upDownButtonContainer">
+          <div class="upDownButtonHeader">
+            <p>Pisos</p>
+          </div>
+          <form class="upDownButtonContainerInternal">
+            <div class="upDownButtonNumber">
+              <input class="upDownLabel" type="text" name="cantidadPisos" value="0"/>
+            </div>
+            <div class="upDownButtonBotones">
+              <input class="upButton" type="button" value=" /\ " onclick="this.form.cantidadPisos.value++;">
+              <input class="downButton" type=button value=" \/ " onclick="if(this.form.cantidadPisos.value>0)this.form.cantidadPisos.value--;" >
+            </div>
+          </form>
+        </div>
+
+        <!-- UP DOWN DEPARTAMENTOS -->
+
+        <div class="upDownButtonContainer">
+          <div class="upDownButtonHeader">
+            <p>Departamentos</p>
+          </div>
+          <form class="upDownButtonContainerInternal">
+            <div class="upDownButtonNumber">
+              <input class="upDownLabel" type="text" name="cantidadDepartamentos" value="0"/>
+            </div>
+            <div class="upDownButtonBotones">
+              <input class="upButton" type="button" value=" /\ " onclick="this.form.cantidadDepartamentos.value++;">
+              <input class="downButton" type=button value=" \/ " onclick="if(this.form.cantidadDepartamentos.value>0)this.form.cantidadDepartamentos.value--;" >
+            </div>
+          </form>
+        </div>
+
+        <!-- UP DOWN AREA APROXIMADA -->
+
+        <div class="upDownButtonContainer">
+          <div class="upDownButtonHeader">
+            <p>Area aproximada</p>
+          </div>
+          <form class="upDownButtonContainerInternal">
+            <div class="upDownButtonNumber">
+              <input class="upDownLabel" type="text" name="areaAproximada" value="0"/>
+            </div>
+            <div class="upDownButtonBotones">
+              <input class="upButton" type="button" value=" /\ " onclick="this.form.areaAproximada.value++;">
+              <input class="downButton" type=button value=" \/ " onclick="if(this.form.areaAproximada.value>0)this.form.areaAproximada.value--;" >
+            </div>
+          </form>
+        </div>
+
+        </div>
+
+        <div class="upDownBotonera">
+
+        <!-- UP DOWN SUBSUELOS -->
+
+        <div class="upDownButtonContainer">
+          <div class="upDownButtonHeader">
+            <p>Cantidad de sótanos</p>
+          </div>
+          <form class="upDownButtonContainerInternal">
+            <div class="upDownButtonNumber">
+              <input class="upDownLabel" type="text" name="cantidadSotanos" value="0"/>
+            </div>
+            <div class="upDownButtonBotones">
+              <input class="upButton" type="button" value=" /\ " onclick="this.form.cantidadSotanos.value++;">
+              <input class="downButton" type=button value=" \/ " onclick="if(this.form.cantidadSotanos.value>0)this.form.cantidadSotanos.value--;" >
+            </div>
+          </form>
+        </div>
+
+      <!-- UP DOWN RESIDENCIALES -->
+
+      <div class="upDownButtonContainer">
+        <div class="upDownButtonHeader">
+          <p>Unidades residenciales</p>
+        </div>
+        <form class="upDownButtonContainerInternal">
+          <div class="upDownButtonNumber">
+            <input class="upDownLabel" type="text" name="cantidadUnidadesResidenciales" value="0"/>
+          </div>
+          <div class="upDownButtonBotones">
+            <input class="upButton" type="button" value=" /\ " onclick="this.form.cantidadUnidadesResidenciales.value++;">
+            <input class="downButton" type=button value=" \/ " onclick="if(this.form.cantidadUnidadesResidenciales.value>0)this.form.cantidadUnidadesResidenciales.value--;" >
+          </div>
+        </form>
+      </div>
+
+      <!-- UP DOWN NO HABITABLES -->
+
+      <div class="upDownButtonContainer">
+        <div class="upDownButtonHeader">
+          <p>Unidades no habitables</p>
+        </div>
+        <form class="upDownButtonContainerInternal">
+          <div class="upDownButtonNumber">
+            <input class="upDownLabel" type="text" name="cantidadUnidadesNoHabitables" value="0"/>
+          </div>
+          <div class="upDownButtonBotones">
+            <input class="upButton" type="button" value=" /\ " onclick="this.form.cantidadUnidadesNoHabitables.value++;">
+            <input class="downButton" type=button value=" \/ " onclick="if(this.form.cantidadUnidadesNoHabitables.value>0)this.form.cantidadUnidadesNoHabitables.value--;" >
+          </div>
+        </form>
+      </div>
+
+      </div>
+
+
+      <!-- DESPLEGABLES -->
+
+
+      <!-- DESPLEGABLE TIPO DE CONSTRUCCION -->
+      <div class="desplegableContainer">
+        <div class="inputContenedor shadow">
+          <div class="icon">
+            <i class="material-icons md24">home</i>
+          </div>
+          <div class="label">
+            <p>Tipo de construccion</p>
+            <i class="material-icons md24">keyboard_arrow_down</i>
+          </div>
+        </div>
+        <form class="dropdown-content shadow">
+          <input type="checkbox" name="" value="">Pórticos de hormigón<br>
+          <input type="checkbox" name="" value="">Pórticos de acero<br>
+          <input type="checkbox" name="" value="">Manpostería confinada<br>
+          <input type="checkbox" name="" value="">Manpostería no confinada<br>
+          <input type="checkbox" name="" value="">Hormigón prefabricado<br>
+          <input type="checkbox" name="" value="">Adobe<br>
+          <input type="checkbox" name="" value="">Muros de hormigón<br>
+        </form>
+      </div>
+
+      <!-- DESPLEGABLE USO DEL EDIFICIO -->
+
+      <div class="desplegableContainer">
+        <div class="inputContenedor shadow">
+          <div class="icon">
+            <i class="material-icons md24">build</i>
+          </div>
+          <div class="label">
+            <p>Uso del edificio</p>
+            <i class="material-icons md24">keyboard_arrow_down</i>
+          </div>
+        </div>
+        <form class="dropdown-content shadow">
+          <input type="checkbox" name="" value="">Casa habitación<br>
+          <input type="checkbox" name="" value="">Departamento<br>
+          <input type="checkbox" name="" value="">Comercio<br>
+          <input type="checkbox" name="" value="">Oficina<br>
+          <input type="checkbox" name="" value="">Oficina privada<br>
+          <input type="checkbox" name="" value="">Industria<br>
+          <input type="checkbox" name="" value="">Depósito<br>
+          <input type="checkbox" name="" value="">Educación<br>
+          <input type="checkbox" name="" value="">Recreativo<br>
+          <input type="checkbox" name="" value="">Iglesia<br>
+          <input type="checkbox" name="" value="">Servicio de emergencia<br>
+          <input type="checkbox" name="" value="">Histórico<br>
+          <input type="checkbox" name="" value="">Otros<br>
+        </form>
+      </div>
+
+      <!-- BOTON -->
+      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow"><a href="form13.html">Siguiente</a>
+      </button>
+    </section>
+  </body>
+</html>

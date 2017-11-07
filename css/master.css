@@ -355,3 +355,18 @@ background: #00BCD4;
     width: 40px;
   }
 }
+
+.material-icons.md36.botonRojo{
+  transition: .3s;
+  color: red;
+}
+
+.material-icons.md36.botonAmarillo{
+  transition: .3s;
+  color: yellow;
+}
+
+.material-icons.md36.botonVerde{
+  transition: .3s;
+  color: green;
+}

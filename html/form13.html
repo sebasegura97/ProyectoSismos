@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Relevamiento de sismos</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="cabecera" >
+      <h1 class="cabeceraTitulo">
+        Evaluacion - Condiciones observadas
+      </h1>
+    </header>
+
+    <section class="portada">
+
+      <!-- DESDE AQUI -->
+
+      <!-- CLASIFICACION DE COLAPSO -->
+
+      <div class="botoneraContainer shadow" >
+        <div class="botoneraHeader">
+          <h2>Colapso, colapso parcial o edificio fuera de fundacion</h2>
+        </div>
+        <div class="botonera">
+          <div class="boton">
+            <i class="material-icons md36" id="buttonLeve">check</i>
+            <p>Leve/Ninguno</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36" id="buttonModerado">report_problem</i>
+            <p>Moderado</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36" id="buttonSevero">block</i>
+            <p>Severo</p>
+          </div>
+        </div>
+        <label for="rangeColapso" id="labelRangeColapso">50%</label>
+        <input type="range" name="rangeColapso" id="inputRangeColapso" step="5" min="0" max="100" onchange="changeLabel()" onmousemove="changeLabel()">
+      </div>
+
+      <!-- HASTA AQUI -->
+
+      <!-- CLASIFICACION DE INCLINACION -->
+      <div class="botoneraContainer shadow" >
+        <div class="botoneraHeader">
+          <h2>Inclinacion de un edificio o piso</h2>
+        </div>
+        <div class="botonera">
+          <div class="boton">
+            <i class="material-icons md36" id="buttonLeveI">check</i>
+            <p>Leve/Ninguno</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36" id="buttonModeradoI">report_problem</i>
+            <p>Moderado</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36" id="buttonSeveroI">block</i>
+            <p>Severo</p>
+          </div>
+        </div>
+        <label for="rangeInclinacion" id="labelRangeInclinacion">50%</label>
+        <input type="range" name="rangeInclinacion" id="inputRangeInclinacion" step="5" min="0" max="100" onchange="changeLabela()" onmousemove="changeLabela()">
+      </div>
+
+      <!-- CLASIFICACION DE DAÑOS -->
+      <div class="botoneraContainer shadow">
+        <div class="botoneraHeader">
+          <h2>Daños por cortes en muros, otros daños estructurales</h2>
+        </div>
+        <div class="botonera">
+          <div class="boton">
+            <i class="material-icons md36" id="buttonLeveD">check</i>
+            <p>Leve/Ninguno</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36" id="buttonModeradoD">report_problem</i>
+            <p>Moderado</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36" id="buttonSeveroD">block</i>
+            <p>Severo</p>
+          </div>
+        </div>
+        <label for="rangeDanos" id="labelRangeDanos">50%</label>
+        <input type="range" name="rangeDanos" id="inputRangeDanos" step="5" min="0" max="100" onchange="changeLabelb()" onmousemove="changeLabelb()">
+      </div>
+    <!-- CLASIFICACION DE PELIGRO DE CAIDA -->
+      <div class="botoneraContainer shadow">
+        <div class="botoneraHeader">
+          <h2>Peligor de caida de parapetos, chimeneas u otros</h2>
+        </div>
+        <div class="botonera">
+          <div class="boton">
+            <i class="material-icons md36" id="buttonLeveC">check</i>
+            <p>Leve/Ninguno</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36" id="buttonModeradoC">report_problem</i>
+            <p>Moderado</p>
+          </div>
+          <div class="boton">
+            <i class="material-icons md36" id="buttonSeveroC">block</i>
+            <p>Severo</p>
+          </div>
+        </div>
+        <label for="rangeCaida" id="labelRangeCaida">50%</label>
+        <input type="range" name="rangeCaida" id="inputRangeCaida" step="5" min="0" max="100" onchange="changeLabelc(); promedio()" onmousemove="changeLabelc()">
+      </div>
+    <!-- CLASIFICACION DE MOVIMIENTO -->
+            <div class="botoneraContainer shadow">
+              <div class="botoneraHeader">
+                <h2>Movimiento de ladera o fisura</h2>
+              </div>
+              <div class="botonera">
+                <div class="boton">
+                  <i class="material-icons md36" id="buttonLeveM">check</i>
+                  <p>Leve/Ninguno</p>
+                </div>
+                <div class="boton">
+                  <i class="material-icons md36" id="buttonModeradoM">report_problem</i>
+                  <p>Moderado</p>
+                </div>
+                <div class="boton">
+                  <i class="material-icons md36" id="buttonSeveroM">block</i>
+                  <p>Severo</p>
+                </div>
+              </div>
+              <label for="rangeMovimiento" id="labelRangeMovimiento">50%</label>
+              <input type="range" name="rangeMovimiento" id="inputRangeMovimiento" step="5" min="0" max="100" onchange="changeLabeld()" onmousemove="changeLabeld()">
+            </div>
+<!-- MODULO COMENTARIOS -->
+    <div class ="botoneraContainer shadow">
+      <div class="botoneraHeader">
+        <h2 >
+          Comentarios
+        </h2>
+      </div>
+      <textarea class="textArea" placeholder="Escriba aqui" id="EvaluacionRapida_comentarios"></textarea>
+    </div>
+
+<!-- DAÑOS TOTALES -->
+
+
+<!-- <div class ="botoneraContainer shadow">
+  <div class="botoneraHeader">
+    <h2 >
+      Daños totales al edificio
+    </h2>
+  </div>
+  <div class="dañosTotales">
+      <p>En  base a los dato que cargò en esta seccion del formulario, calculamos el siguiente daño total aproximado:</p>
+      <label id="finalprom" onchange="promedio()" onmousemove="promedio()" id="EvaluacionRapida_dañoEstimado"> </label>
+  </div>
+</div> -->
+
+
+<!-- BOTON -->
+      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow" onclick="writeData()"><a href="form14.html">Siguiente</a>
+      </button>
+  </section>
+  </body>
+
+  <script>
+
+    //CAMBIO EN LABELS
+
+ var inputRangeColapso = document.getElementById('inputRangeColapso');
+
+function changeLabel() {
+
+  document.getElementById('labelRangeColapso').innerHTML = document.getElementById('inputRangeColapso').value + '%'; //Cambia el numero que muestra el porcentaje
+
+  if (document.getElementById('inputRangeColapso').value < 33) { // Si es menor que 33 cambia los 3 iconos (uno a color dos negros)
+    document.getElementById('buttonLeve').style.color = "green";
+    document.getElementById('buttonModerado').style.color = "black";
+    document.getElementById('buttonSevero').style.color = "black";
+  }
+  if (document.getElementById('inputRangeColapso').value > 33) {
+    document.getElementById('buttonLeve').style.color = "black";
+    document.getElementById('buttonModerado').style.color = "yellow";
+    document.getElementById('buttonSevero').style.color = "black";
+  }
+  if (document.getElementById('inputRangeColapso').value > 66){
+    document.getElementById('buttonLeve').style.color = "black";
+    document.getElementById('buttonModerado').style.color = "black";
+    document.getElementById('buttonSevero').style.color = "red";
+  }
+  return a = document.getElementById('inputRangeColapso');
+}
+
+var inputRangeInclinacion = document.getElementById('inputRangeInclinacion');
+
+function changeLabela() {
+  document.getElementById('labelRangeInclinacion').innerHTML = document.getElementById('inputRangeInclinacion').value + '%'; //Cambia el numero que muestra el porcentaje
+
+
+  if (document.getElementById('inputRangeInclinacion').value < 33) { // Si es menor que 33 cambia los 3 iconos (uno a color dos negros)
+    document.getElementById('buttonLeveI').style.color = "green";
+    document.getElementById('buttonModeradoI').style.color = "black";
+    document.getElementById('buttonSeveroI').style.color = "black";
+  }
+  if (document.getElementById('inputRangeInclinacion').value > 33) {
+    document.getElementById('buttonLeveI').style.color = "black";
+    document.getElementById('buttonModeradoI').style.color = "yellow";
+    document.getElementById('buttonSeveroI').style.color = "black";
+  }
+  if (document.getElementById('inputRangeInclinacion').value > 66){
+    document.getElementById('buttonLeveI').style.color = "black";
+    document.getElementById('buttonModeradoI').style.color = "black";
+    document.getElementById('buttonSeveroI').style.color = "red";
+  }
+}
+
+
+var inputRangeDanos = document.getElementById('inputRangeDanos');
+
+function changeLabelb() {
+  document.getElementById('labelRangeDanos').innerHTML = document.getElementById('inputRangeDanos').value + '%'; //Cambia el numero que muestra el porcentaje
+
+
+  if (document.getElementById('inputRangeDanos').value < 33) { // Si es menor que 33 cambia los 3 iconos (uno a color dos negros)
+    document.getElementById('buttonLeveD').style.color = "green";
+    document.getElementById('buttonModeradoD').style.color = "black";
+    document.getElementById('buttonSeveroD').style.color = "black";
+  }
+  if (document.getElementById('inputRangeDanos').value > 33) {
+    document.getElementById('buttonLeveD').style.color = "black";
+    document.getElementById('buttonModeradoD').style.color = "yellow";
+    document.getElementById('buttonSeveroD').style.color = "black";
+  }
+  if (document.getElementById('inputRangeDanos').value > 66){
+    document.getElementById('buttonLeveD').style.color = "black";
+    document.getElementById('buttonModeradoD').style.color = "black";
+    document.getElementById('buttonSeveroD').style.color = "red";
+  }
+}
+
+
+
+var inputRangeCaida = document.getElementById('inputRangeCaida');
+
+function changeLabelc() {
+  document.getElementById('labelRangeCaida').innerHTML = document.getElementById('inputRangeCaida').value + '%'; //Cambia el numero que muestra el porcentaje
+
+
+  if (document.getElementById('inputRangeCaida').value < 33) { // Si es menor que 33 cambia los 3 iconos (uno a color dos negros)
+    document.getElementById('buttonLeveC').style.color = "green";
+    document.getElementById('buttonModeradoC').style.color = "black";
+    document.getElementById('buttonSeveroC').style.color = "black";
+  }
+  if (document.getElementById('inputRangeCaida').value > 33) {
+    document.getElementById('buttonLeveC').style.color = "black";
+    document.getElementById('buttonModeradoC').style.color = "yellow";
+    document.getElementById('buttonSeveroC').style.color = "black";
+  }
+  if (document.getElementById('inputRangeCaida').value > 66){
+    document.getElementById('buttonLeveC').style.color = "black";
+    document.getElementById('buttonModeradoC').style.color = "black";
+    document.getElementById('buttonSeveroC').style.color = "red";
+  }
+}
+
+
+var inputRangeMovimiento = document.getElementById('inputRangeMovimiento');
+
+function changeLabeld() {
+  document.getElementById('labelRangeMovimiento').innerHTML = document.getElementById('inputRangeMovimiento').value + '%'; //Cambia el numero que muestra el porcentaje
+
+
+  if (document.getElementById('inputRangeMovimiento').value < 33) { // Si es menor que 33 cambia los 3 iconos (uno a color dos negros)
+    document.getElementById('buttonLeveM').style.color = "green";
+    document.getElementById('buttonModeradoM').style.color = "black";
+    document.getElementById('buttonSeveroM').style.color = "black";
+  }
+  if (document.getElementById('inputRangeMovimiento').value > 33) {
+    document.getElementById('buttonLeveM').style.color = "black";
+    document.getElementById('buttonModeradoM').style.color = "yellow";
+    document.getElementById('buttonSeveroM').style.color = "black";
+  }
+  if (document.getElementById('inputRangeMovimiento').value > 66){
+    document.getElementById('buttonLeveM').style.color = "black";
+    document.getElementById('buttonModeradoM').style.color = "black";
+    document.getElementById('buttonSeveroM').style.color = "red";
+  }
+}
+
+
+
+function promedio(){
+   var valueColapso = Number(document.getElementById('inputRangeColapso').value);
+   var valueInclinacion = Number(document.getElementById('inputRangeInclinacion').value);
+   var valueDanos = Number(document.getElementById('inputRangeDanos').value);
+   var valueCaida = Number(document.getElementById('inputRangeCaida').value);
+   var valueMovimiento = Number(document.getElementById('inputRangeMovimiento').value);
+   var prom = (valueColapso + valueInclinacion + valueDanos + valueCaida + valueMovimiento);
+   document.getElementById('finalprom').innerHTML = prom;
+
+}
+
+
+//CARGA DE COOKIES
+function writeCookie(name, value){
+      document.cookie = name + "=" + value;
+      }
+
+ function writeData(){
+   //SCROLLBARS
+   var valueColapso = Number(document.getElementById('inputRangeColapso').value);
+   var valueInclinacion = Number(document.getElementById('inputRangeInclinacion').value);
+   var valueDanos = Number(document.getElementById('inputRangeDanos').value);
+   var valueCaida = Number(document.getElementById('inputRangeCaida').value);
+   var valueMovimiento = Number(document.getElementById('inputRangeMovimiento').value);
+   var valueComentarios = document.getElementById('EvaluacionRapida_comentarios').value;
+
+
+   writeCookie(name="EvaluacionRapida_colapso",valueColapso);
+   writeCookie(name="EvaluacionRapida_inclinacion",valueInclinacion);
+   writeCookie(name="EvaluacionRapida_danos",valueDanos);
+   writeCookie(name="EvaluacionRapida_peligro",valueCaida);
+   writeCookie(name="EvaluacionRapida_movimiento",valueMovimiento);
+   writeCookie(name="EvaluacionRapida_comentarios",valueComentarios);
+
+ }
+
+
+
+
+
+  </script>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</html>

@@ -356,6 +356,10 @@ background: #00BCD4;
   }
 }
 
+#h2Form15{
+  color: white;
+}
+
 .material-icons.md36.botonRojo{
   transition: .3s;
   color: red;

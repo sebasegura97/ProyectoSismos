@@ -15,16 +15,16 @@
       </h1>
     </header>
     <section class="portada">
-    <p class="texto">
+    <h2 class="texto" id="h2Form15">
       Solo tilde aquellos cuadros en los que se necesite alguna acción adicional
-    </p>
+    </h2>
 
     <!-- Checkbox barricada-->
         <div class="checkboxContainer">
           <div class="checkboxHeader">
-            <input type="checkbox" onchange="barricadaTextArea()">
+            <input type="checkbox" onchange="barricadaTextArea()" id="Barricada">
             <p class="checkboxText">Se requiere barricada en las siguientes áreas:</p>
-          </input>
+            </input>
           </div>
           <textarea class="textArea" placeholder="Detalle" id="barricadaDetalle" style="display: none"></textarea>
         </div>
@@ -32,9 +32,9 @@
     <!-- Checkbox geotecnica-->
         <div class="checkboxContainer">
           <div class="checkboxHeader">
-            <input type="checkbox" onchange="geotecnicaTextArea()">
+            <input type="checkbox" onchange="geotecnicaTextArea()" id="Geotecnica">
             <p class="checkboxText">Geotécnica</p>
-          </input>
+            </input>
           </div>
           <textarea class="textArea" placeholder="Detalle" id="geotecnicaDetalle" style="display: none"></textarea>
         </div>
@@ -42,7 +42,7 @@
     <!-- Checkbox estructural-->
         <div class="checkboxContainer">
           <div class="checkboxHeader">
-            <input type="checkbox" onchange="estructuralTextArea()">
+            <input type="checkbox" onchange="estructuralTextArea()" id="Estructural">
             <p class="checkboxText">Estructural</p>
           </input>
           </div>
@@ -52,7 +52,7 @@
     <!-- Checkbox otro-->
         <div class="checkboxContainer">
           <div class="checkboxHeader">
-            <input type="checkbox" onchange="otroTextArea()">
+            <input type="checkbox" onchange="otroTextArea()" id="Otros">
             <p class="checkboxText">Otros</p>
           </input>
           </div>
@@ -66,14 +66,38 @@
           Comentarios
         </h2>
       </div>
-      <textarea class="textArea" placeholder="Escriba aqui"></textarea>
+      <textarea class="textArea" placeholder="Escriba aqui" id="Comentarios"></textarea>
     </div>
 
 <!-- BOTON -->
-      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow"><a href="#">Siguiente</a>
+      <button type="button" name="buttonSiguiente" class="buttonSiguiente shadow" onclick="cargarDatos()"><a href="">Siguiente</a>
       </button>
   </section>
   </body>
+
+  <script type="text/javascript">
+
+        function writeCookie(name, value){
+            document.cookie = name + "=" + value;
+        }
+
+        function cargarDatos(){
+          var Barricada = document.getElementById('Barricada').checked;
+          var Geotecnica = document.getElementById('Geotecnica').checked;
+          var Estructural = document.getElementById('Estructural').checked;
+          var Otros = document.getElementById('Otros').checked;
+          var Comentarios = document.getElementById('Comentarios').value;
+
+          writeCookie(name="aa_req_Barricada", Barricada);
+          writeCookie(name="aa_req_EvalGeo", Geotecnica);
+          writeCookie(name="aa_req_EvalEst", Estructural);
+          writeCookie(name="aa_req_otro", Otros);
+          writeCookie(name="aa_req_comentarios", Comentarios);
+        }
+
+
+
+  </script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="../js/index.js"></script>
 </html>

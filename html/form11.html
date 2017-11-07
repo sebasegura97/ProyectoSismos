@@ -49,7 +49,7 @@
       <!-- AREA -->
 
       <div class="desplegableContainer">
-        <div class="inputContenedor shadow">
+        <div class="inputContenedor shadow" onclick="toggle()" >
           <div class="icon">
             <i class="material-icons md24">content_paste</i>
           </div>
@@ -58,7 +58,7 @@
             <i class="material-icons md24">keyboard_arrow_down</i>
           </div>
         </div>
-        <form class="dropdown-content shadow">
+        <form class="dropdown-content shadow" id="dropDownToggle">
           <input type="radio" name="areaInspeccion" value="Interior">Interior<br>
           <input type="radio" name="areaInspeccion" value="Exterior">Exterior<br>
         </form>
@@ -68,6 +68,13 @@
       <button type="button" name="buttonSiguiente"  class="buttonSiguiente shadow" ><a href="form12.html" >Siguiente</a>
       </button>
     </section>
+    <script type="text/javascript">
+    function toggle() {
+        var button = document.getElementById('dropDownToggle');
+        button.classList.toggle("dropdown-content");
+      }
+
+    </script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
   </body>
 </html>

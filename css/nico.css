@@ -38,6 +38,9 @@
 .checkboxText{
   font-family: "Roboto slab";
   font-size: 12pt;
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
 }
 
 /*Dropdown*/
@@ -58,9 +61,14 @@
   width: calc(100% - 44px);
   z-index: 1;
 }
-.desplegableContainer:hover .dropdown-content {
+/*.desplegableContainer:hover .dropdown-content {
+  display: block;
+}*/
+
+.visible {
   display: block;
 }
+
 /*upDownButton*/
 .upDownTable
 {
@@ -182,6 +190,9 @@
 .label i{
   color: black;
 }
-.dropdown-content input {
+#dropDownToggle{
+    background-color: white;
+    margin-left: 44px;
+
 
 }

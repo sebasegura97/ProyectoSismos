@@ -1,3 +1,49 @@
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Relevamiento de sismos</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/nico.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body class="bodyPortada">
+
+    <header class="cabecera" >
+      <h1 class="cabeceraTitulo">
+        Formulario Cargado exitosamente!
+      </h1>
+    </header>
+
+    <div class="finalBotonera">
+        <a href="../index.html" class="shadow" id="buttonFinal" onclick="toggle()" >
+          <div class="formulario">
+            <i class="material-icons md72">add</i>
+            <h3>Nuevo formulario</h3>
+          </div>
+        </a>
+    </div>
+
+
+
+
+    <script>
+
+    function toggle() {
+        var button = document.getElementById('buttonFinal');
+        button.classList.toggle("shadow");
+      }
+
+
+
+    </script>
+    <script type="../text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="../text/javascript" src="js/index.js"></script>
+  </body>
+</html>
+
+
 <?php
 
 // CONEXION
@@ -10,7 +56,7 @@
       die("Connection failed: " . $conn->connect_error);
       echo "No conectado";
   }
-  echo "Connected successfully <br>";
+
 
     // //CARGA DE DATOS - UN ADMINISTRADOR QUE PERMITA CONTINUAR CON EL RESTO DE LA CARGA
     // //Se ejecuto una sola vez la consulta, utilizaremos este administrador para poder mostrar el  prototipo

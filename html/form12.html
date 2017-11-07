@@ -105,8 +105,8 @@
 
 
       <!-- DESPLEGABLE TIPO DE CONSTRUCCION -->
-      <div class="desplegableContainer">
-        <div class="inputContenedor shadow">
+      <div class="desplegableContainer" >
+        <div class="inputContenedor shadow" onclick="toggleConstruccion()" >
           <div class="icon">
             <i class="material-icons md24">home</i>
           </div>
@@ -115,7 +115,7 @@
             <i class="material-icons md24">keyboard_arrow_down</i>
           </div>
         </div>
-        <form class="dropdown-content shadow">
+        <form class="dropdown-content shadow dropDownContainer" id="formConstruccion">
           <input type="checkbox" name="" value="">Pórticos de hormigón<br>
           <input type="checkbox" name="" value="">Pórticos de acero<br>
           <input type="checkbox" name="" value="">Manpostería confinada<br>
@@ -128,8 +128,8 @@
 
       <!-- DESPLEGABLE USO DEL EDIFICIO -->
 
-      <div class="desplegableContainer">
-        <div class="inputContenedor shadow">
+      <div class="desplegableContainer" >
+        <div class="inputContenedor shadow" onclick="toggleEdificio()">
           <div class="icon">
             <i class="material-icons md24">build</i>
           </div>
@@ -138,7 +138,7 @@
             <i class="material-icons md24">keyboard_arrow_down</i>
           </div>
         </div>
-        <form class="dropdown-content shadow">
+        <form class="dropdown-content shadow  dropDownContainer" id="formEdificio">
           <input type="checkbox" name="" value="">Casa habitación<br>
           <input type="checkbox" name="" value="">Departamento<br>
           <input type="checkbox" name="" value="">Comercio<br>
@@ -160,6 +160,14 @@
       </button>
     </section>
     <script type="text/javascript">
+    function toggleConstruccion() {
+        var button = document.getElementById('formConstruccion');
+        button.classList.toggle("dropdown-content");
+      }
+    function toggleEdificio() {
+        var button = document.getElementById('formEdificio');
+        button.classList.toggle("dropdown-content");
+      }
 
     function writeData(){
       var nameMunicipio = "Inspeccion_municipio";

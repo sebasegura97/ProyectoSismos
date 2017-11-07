@@ -370,3 +370,7 @@ background: #00BCD4;
   transition: .3s;
   color: green;
 }
+
+.borderTop{
+  border-top: 2px solid #795548;
+}

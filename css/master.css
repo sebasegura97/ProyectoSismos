@@ -378,3 +378,14 @@ background: #00BCD4;
 .borderTop{
   border-top: 2px solid #795548;
 }
+.finalBotonera{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height:40vh;
+}
+.finalBotonera a{
+  border: 2 px solid #795548;
+  border-radius: 10px;
+}
